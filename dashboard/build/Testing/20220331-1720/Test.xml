@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Windows-AMD64-Experimental"
+	BuildStamp="20220331-1720-Experimental"
+	Name="DESKTOP-ET9MH89"
+	Generator="ctest-3.22.0"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-ET9MH89"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19042)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="10"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="10811"
+	TotalPhysicalMemory="8157"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3198"
+	>
+	<Testing>
+		<StartDateTime>Mar 31 20:20 RTZ 2 (ceia)</StartDateTime>
+		<StartTestTime>1648747220</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 31 20:20 RTZ 2 (ceia)</EndDateTime>
+		<EndTestTime>1648747220</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
