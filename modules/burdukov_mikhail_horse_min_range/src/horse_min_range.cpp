@@ -6,12 +6,12 @@
 #include <utility>
 #include <vector>
 
-int8_t minHorseRange::calc_range() const {
-  const int8_t never_was = -1;
-  std::vector<std::vector<int16_t>> was(
-      table_size, std::vector<int16_t>(table_size, never_was));
+int minHorseRange::calc_range() const {
+  const int never_was = -1;
+  std::vector<std::vector<int>> was(
+      table_size, std::vector<int>(table_size, never_was));
   was[start.first][start.second] = 0;
-  std::queue<std::pair<int16_t, int16_t>> q;
+  std::queue<std::pair<int, int>> q;
   q.push(start);
   while (!q.empty()) {
     auto x = q.front();
