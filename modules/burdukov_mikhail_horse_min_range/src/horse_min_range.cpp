@@ -2,14 +2,17 @@
 
 #include "include/horse_min_range.h"
 
+#include <cassert>
 #include <queue>
 #include <utility>
 #include <vector>
 
 int minHorseRange::calc_range() const {
+  assert(start.first >= 0 && start.first < table_size);
+  assert(finish.second >= 0 && finish.second < table_size);
   const int never_was = -1;
-  std::vector<std::vector<int>> was(
-      table_size, std::vector<int>(table_size, never_was));
+  std::vector<std::vector<int>> was(table_size,
+                                    std::vector<int>(table_size, never_was));
   was[start.first][start.second] = 0;
   std::queue<std::pair<int, int>> q;
   q.push(start);
