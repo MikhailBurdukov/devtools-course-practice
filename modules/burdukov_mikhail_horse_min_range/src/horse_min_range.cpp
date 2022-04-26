@@ -17,7 +17,7 @@ int minHorseRange::calc_range() const {
     auto x = q.front();
     q.pop();
     if (x == finish) break;
-    for (int i = 0; i < di.size(); i++) {
+    for (size_t i = 0; i < di.size(); i++) {
       auto y(x);
       y.first += di[i];
       y.second += dj[i];
