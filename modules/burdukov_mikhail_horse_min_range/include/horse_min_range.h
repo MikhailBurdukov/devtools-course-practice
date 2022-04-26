@@ -19,7 +19,7 @@ class minHorseRange {
  private:
   std::vector<std::vector<int>> table;
   std::pair<int, int> start, finish;
-  const size_t table_size = 8;
+  const int table_size = 8;
   const std::vector<int> di = {2, 2, 1, 1, -2, -2, -1, -1};
   const std::vector<int> dj = {1, -1, 2, -2, 1, -1, 2, -2};
 
