@@ -3,7 +3,9 @@
 #include "include/horse_min_range.h"
 
 #include <queue>
-#include <iostream>
+#include <utility>
+#include <vector>
+
 int8_t minHorseRange::calc_range() const {
   const int8_t never_was = -1;
   std::vector<std::vector<int16_t>> was(
