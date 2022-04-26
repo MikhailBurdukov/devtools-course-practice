@@ -68,7 +68,7 @@ TEST(minHorseRange, Range_with_barriers1) {
 TEST(minHorseRange, Range_with_barriers3) {
     chess_position_t st('a', 1);
     chess_position_t fin('b', 3);
-    chess_position_t bar('a', 2);
+    chess_position_t bar('h', 2);
     minHorseRange a(st, fin);
     a.set_barrier(bar);
     EXPECT_EQ(1, a.calc_range());
