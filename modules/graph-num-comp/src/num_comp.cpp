@@ -25,8 +25,6 @@ int matrixType::getNumVert() {
 }
 matrixType::matrixType(int numvert, const std::vector<std::vector<int>> &G)
     : numVert{numvert}, Graph{ G } {
-    //  matrixType::numVert = numvert;
-    //  matrixType::Graph = G;
 }
 
 int generateRandEdge() {
@@ -48,12 +46,12 @@ void matrixType::DFS(int start, int f) {
             this->used.push_back(false);
         f = 0;
     }
-    // std::cout << start << " ";
     this->used[start] = true;
     for (int i = 0; i < this->numVert; i++)
         if (!used[i] && (this->Graph[start][i] != 0))
             DFS(i, f);
 }
+
 int matrixType::numComp(int f) {
     if (f != 0) {
         for (int i = 0; i < this->numVert; i++)
@@ -61,6 +59,7 @@ int matrixType::numComp(int f) {
         f = 0;
     }
     int n = 0;
+    used.assign(numVert, false);
     for (int i = 0; i < this->numVert; i++) {
         if (!used[i]) {
             ++n;

@@ -3,3 +3,43 @@
 #############################################
 
 set(prefix "${MODULE}")
+
+add_test(
+    NAME ${prefix}_test1
+    COMMAND ${APPLICATION} 2 0 
+)
+set_tests_properties (${prefix}_test1 PROPERTIES
+    PASS_REGULAR_EXPRESSION "2"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_test2
+    COMMAND ${APPLICATION} 2 1 0 1 
+)
+set_tests_properties (${prefix}_test2 PROPERTIES
+    PASS_REGULAR_EXPRESSION "1"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_test3
+    COMMAND ${APPLICATION} 3 1 0 1 
+)
+set_tests_properties (${prefix}_test3 PROPERTIES
+    PASS_REGULAR_EXPRESSION "2"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_test4
+    COMMAND ${APPLICATION} 3 2 0 1 1 2 
+)
+set_tests_properties (${prefix}_test4 PROPERTIES
+    PASS_REGULAR_EXPRESSION "1"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_test5
+    COMMAND ${APPLICATION} 3 3 0 1 1 2 0 2
+)
+set_tests_properties (${prefix}_test5 PROPERTIES
+    PASS_REGULAR_EXPRESSION "1"
+    LABELS "${MODULE}")    
