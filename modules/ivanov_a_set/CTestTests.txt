@@ -25,14 +25,6 @@ set_tests_properties(${prefix}_two_element PROPERTIES
     PASS_REGULAR_EXPRESSION "2"
     LABELS "${MODULE}")
 
-
-set(prefix "${MODULE}")
-add_test(NAME ${prefix}_zero_elements
-    COMMAND ${APPLICATION} 1 0 2 0 3)
-set_tests_properties(${prefix}_zero_elements PROPERTIES
-    PASS_REGULAR_EXPRESSION "0"
-    LABELS "${MODULE}")
-
 set(prefix "${MODULE}")
 add_test(NAME ${prefix}_one_elements
     COMMAND ${APPLICATION} 1 0 1 1 2 0 3)
@@ -40,5 +32,11 @@ set_tests_properties(${prefix}_zero_elements PROPERTIES
     PASS_REGULAR_EXPRESSION "1"
     LABELS "${MODULE}")
 
+set(prefix "${MODULE}")
+add_test(NAME ${prefix}_one_elements
+    COMMAND ${APPLICATION} 1 0 1 1 1 2 3)
+set_tests_properties(${prefix}_zero_elements PROPERTIES
+    PASS_REGULAR_EXPRESSION "3"
+    LABELS "${MODULE}")
 
 
